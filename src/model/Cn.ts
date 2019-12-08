@@ -66,8 +66,7 @@ export namespace CnVars{
 		Null = 0,
 		Full = 1,
 		Simple = 2,
-		FullBulletproof = 3,
-		SimpleBulletproof = 4,
+		Bulletproof = 3,
 	}
 
 	export let H = "8b655970153799af2aeadc9ff1add0ea6c7251d54154cfa92c173a0dd39c1f94"; //base H for amounts
@@ -1011,13 +1010,7 @@ export namespace CnTransactions{
 						i,
 						mask);
 					break;
-				case CnVars.RCT_TYPE.SimpleBulletproof:
-					amount = CnTransactions.decodeRctSimple(rv,
-						scalar1,
-						i,
-						mask);
-					break;
-				case CnVars.RCT_TYPE.FullBulletproof:
+				case CnVars.RCT_TYPE.Bulletproof:
 					amount = CnTransactions.decodeRctSimple(rv,
 						scalar1,
 						i,
